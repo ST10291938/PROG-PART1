@@ -48,7 +48,6 @@ namespace Part1v1
 
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Green;
 
             Console.WriteLine("Hello! Welcome to your recipe application:");
             Console.WriteLine("Please enter a name for your recipe:");
@@ -98,7 +97,6 @@ namespace Part1v1
             
         }
             Console.WriteLine("*************************************************************************************************************************");
-            Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine($"\nRecipe for: {recipeName}");
             recipe.DisplayRecipe();
 
