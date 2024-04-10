@@ -40,5 +40,19 @@ namespace Part1v1
                 Console.WriteLine($"{methodNumber++}.{method.GetDescription()}");
             }
         }
+
+        public void DeleteData()
+        {
+            Ingredients[] myIngredients = new Ingredients[0];
+            MyCookingMethod[] myCookingMethod= new MyCookingMethod[0];
+        }
+
+        public void ResetValues()
+        {
+            foreach(var ingredients in Ingredients)
+            {
+                ingredients.Quantity = 1;
+            }
+        }
     }
 }

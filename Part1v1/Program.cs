@@ -96,17 +96,21 @@ namespace Part1v1
 
             }
             Console.WriteLine("*************************************************************************************************************************");
-            Console.WriteLine($"\nRECIPE FOR: {recipeName}");
+            Console.WriteLine($"RECIPE FOR: {recipeName}");
             recipe.DisplayRecipe();
 
 
+            Console.WriteLine("\n");
             bool SelectOption = true;
 
             while (SelectOption)
             {
-                Console.WriteLine("\nPlease choose one of the following options to continue: \n");
+                Console.WriteLine("----------------------------------------------------------------------------------------------------------------------");
+
+                Console.WriteLine("Please choose one of the following options to continue: \n");
                 Console.WriteLine("1. Scale ingredients factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
-                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors");
+                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors\n");
+                Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
 
 
 
@@ -123,11 +127,16 @@ namespace Part1v1
                         break;
 
                     case 2:
+
                         Console.WriteLine("Clear option selected");
+                        recipe.DeleteData();
                         break;
 
                     case 3:
+                        recipe.ResetValues();
+
                         Console.WriteLine("Reset option selected");
+                        recipe.DisplayRecipe();
                         break;
 
                         case 4:
