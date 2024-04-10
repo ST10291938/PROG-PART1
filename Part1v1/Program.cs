@@ -42,8 +42,7 @@ namespace Part1v1
             }
 
         }
-         
-         
+
 
 
         static void Main(string[] args)
@@ -66,7 +65,7 @@ namespace Part1v1
             Console.Write("\n");
 
             Recipe recipe = new Recipe(recipeName, numOfIngredients, numOfSteps);
-         
+
             for (int i = 0; i < numOfIngredients; i++)
             {
                 Console.WriteLine($"Ingredient {i + 1}: ");
@@ -87,23 +86,79 @@ namespace Part1v1
 
             }
 
-            for (int i = 0;i < numOfSteps;i++)
+            for (int i = 0; i < numOfSteps; i++)
             {
                 Console.WriteLine($"Enter description of step {i + 1}: ");
                 string description = Console.ReadLine();
                 Console.Write("\n");
 
                 recipe.CookingMethods[i] = new MyCookingMethod(description);
-            
-        }
+
+            }
             Console.WriteLine("*************************************************************************************************************************");
-            Console.WriteLine($"\nRecipe for: {recipeName}");
+            Console.WriteLine($"\nRECIPE FOR: {recipeName}");
             recipe.DisplayRecipe();
 
 
+            bool SelectOption = true;
 
+            while (SelectOption)
+            {
+                Console.WriteLine("\nPlease choose one of the following options to continue: \n");
+                Console.WriteLine("1. Scale ingredients factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
+                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors");
+
+
+
+                int option = Convert.ToInt32((Console.ReadLine()));
+
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("Enter the scaling factor: ");
+                        double factor = double.Parse(Console.ReadLine());
+                        recipe.ScaleRecipe(factor);
+                        Console.WriteLine("\nScaled Recipe Details: \n");
+                        recipe.DisplayRecipe();
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Clear option selected");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Reset option selected");
+                        break;
+
+                        case 4:
+                            SelectOption = false;
+                        Console.WriteLine("GOODBYE.");
+                        break;
+
+
+                    default:
+                        Console.WriteLine("Invalid option selected, insert valid option.");
+                        break;
+                }
+
+
+                /*
+                Console.WriteLine("\nPlease choose one of the following options to continue: \n");
+                Console.WriteLine("1. Scale ingredients factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
+                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors");
+                double factor = double.Parse(Console.ReadLine());
+                recipe.ScaleRecipe(factor);
+                Console.WriteLine("\nScaled Recipe Details:");
+                recipe.DisplayRecipe();
+                break;
+                ^/
+                /*
+                // Display the scaled recipe details
+                Console.WriteLine("\nScaled Recipe Details:");
+                recipe.DisplayRecipe();
+                */
+            }
         }
-
         private static void CookingMethods()
         {
             Console.WriteLine("How many steps does your recipe require? ");
