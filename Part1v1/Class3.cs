@@ -53,7 +53,7 @@ namespace Part1v1
         {//method that will revert the quantities back to the original value
             foreach(var ingredients in Ingredients)
             {
-                ingredients.Quantity = 0;
+                ingredients.Quantity = 1;
             }
         }
     }

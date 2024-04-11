@@ -14,8 +14,6 @@ namespace Part1v1
             Console.Write("\n" + recipeName);
 
 
-
-
             Console.WriteLine("\nHow many ingredients does your recipe require? ");
             int numOfIngredients = Convert.ToInt32(Console.ReadLine());
             Console.Write("\n");
@@ -55,7 +53,7 @@ namespace Part1v1
                 recipe.CookingMethods[i] = new MyCookingMethod(description);
 
             }
-            Console.WriteLine("*************************************************************************************************************************");
+            Console.WriteLine("***********************************************************************************************************************");
             Console.WriteLine($"RECIPE FOR: {recipeName}");
             recipe.DisplayRecipe();
 
@@ -71,7 +69,7 @@ namespace Part1v1
                 Console.WriteLine("1. Scale ingredients to factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
                     "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors\n" + "4.Exit\n");
                 Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
-
+                Console.WriteLine("\n");
 
 
                 int option = Convert.ToInt32((Console.ReadLine()));
@@ -82,7 +80,7 @@ namespace Part1v1
                         Console.WriteLine("Enter the scaling factor: ");
                         double factor = double.Parse(Console.ReadLine());
                         recipe.ScaleRecipe(factor);
-                        Console.WriteLine("\nScaled Recipe Details: \n");
+                        Console.WriteLine("\nScaled Recipe Details:");
                         recipe.DisplayRecipe();
                         break;
 
