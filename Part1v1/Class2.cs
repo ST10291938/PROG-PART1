@@ -1,23 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Part1v1
 {
-     class MyCookingMethod
-    {
+    // class MyCookingMethod that encapsulate all the methods for each cooking method
+    class MyCookingMethod
+    {//private field to store each description
         private string description;
 
         public string GetDescription()
-        {
+        {//this method will retrieve the description inserted by the user and return it back to the console
             return description;
         }
 
         public void SetDescription(string value)
-        {
-            description = value;
+        {// this method sets/updates the inserted description
+            description = value;      //contains the the value of each cooking method
         }
 
         public MyCookingMethod(string description) {
