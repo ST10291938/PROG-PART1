@@ -5,46 +5,6 @@ namespace Part1v1
 {
     class Program
     {
-
-        static void Ingredients()
-        {
-            Console.WriteLine("\nHow many ingredients does your recipe have? ");
-            int numOfIngredients = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\n");
-
-            Ingredients[] ingredients = new Ingredients[numOfIngredients];
-
-            for (int i = 0; i < numOfIngredients; i++)
-            {
-                Console.WriteLine($"Ingredient {i + 1}");
-                string name = Console.ReadLine();
-                Console.Write("\n");
-
-                Console.Write($"Enter measurements {i + 1} \n");
-                string measurements = Console.ReadLine();
-                Console.Write("\n");
-
-
-                Console.WriteLine($"Enter quantity {i + 1}");
-                double quantity = Convert.ToDouble(Console.ReadLine());
-
-                ingredients[i] = new Ingredients(name, quantity, measurements);
-
-                Console.WriteLine();
-
-            }
-
-            Console.WriteLine("Your ingredients are: ");
-            foreach (Ingredients ingredient in ingredients)
-            {
-                Console.WriteLine($"{ingredient.Quantity} {ingredient.Measurements} of {ingredient.Name}");
-
-            }
-
-        }
-
-
-
         static void Main(string[] args)
         {
 
