@@ -152,29 +152,8 @@ namespace Part1v1
               
             }
         }
-        private static void CookingMethods()
-        {
-            Console.WriteLine("How many steps does your recipe require? ");
-            int numOfSteps = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\n");
-
-            MyCookingMethod[] cookingMethods = new MyCookingMethod[numOfSteps];
-
-            for (int i = 0; i < numOfSteps; i++)
-            {
-                Console.WriteLine($"Enter description of step {i + 1}: ");
-                string description = Console.ReadLine();
-                Console.Write("\n");
-
-                cookingMethods[i] = new MyCookingMethod(description);
-            }
-
-            Console.WriteLine("Your cooking method is as follows:");
-            foreach (MyCookingMethod cookingMethod in cookingMethods)
-            {
-                Console.Write($"{cookingMethod.GetDescription()}\n");
-            }
+       
         }
     }
-}
+
 
