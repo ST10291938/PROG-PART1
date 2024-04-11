@@ -108,8 +108,8 @@ namespace Part1v1
                 Console.WriteLine("----------------------------------------------------------------------------------------------------------------------");
 
                 Console.WriteLine("Please choose one of the following options to continue: \n");
-                Console.WriteLine("1. Scale ingredients factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
-                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors\n");
+                Console.WriteLine("1. Scale ingredients to factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
+                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors\n" + "4.Exit\n");
                 Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
 
 
@@ -127,21 +127,19 @@ namespace Part1v1
                         break;
 
                     case 2:
-
-                        Console.WriteLine("Clear option selected");
                         recipe.DeleteData();
+                        Console.WriteLine("Recipe data cleared");
                         break;
 
                     case 3:
+                        Console.WriteLine("Recipe reverted back to original values:");
+                        Console.WriteLine("\n");
                         recipe.ResetValues();
-
-                        Console.WriteLine("Reset option selected");
                         recipe.DisplayRecipe();
                         break;
 
                         case 4:
-                            SelectOption = false;
-                        Console.WriteLine("GOODBYE.");
+                        Environment.Exit(0);
                         break;
 
 
@@ -151,21 +149,7 @@ namespace Part1v1
                 }
 
 
-                /*
-                Console.WriteLine("\nPlease choose one of the following options to continue: \n");
-                Console.WriteLine("1. Scale ingredients factor(0.5 for half, 2 for double, 3 for triple)" + ("\n") +
-                    "2. Clear/Delete Data" + ("\n") + "3. Reset to original factors");
-                double factor = double.Parse(Console.ReadLine());
-                recipe.ScaleRecipe(factor);
-                Console.WriteLine("\nScaled Recipe Details:");
-                recipe.DisplayRecipe();
-                break;
-                ^/
-                /*
-                // Display the scaled recipe details
-                Console.WriteLine("\nScaled Recipe Details:");
-                recipe.DisplayRecipe();
-                */
+              
             }
         }
         private static void CookingMethods()
