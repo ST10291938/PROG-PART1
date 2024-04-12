@@ -91,7 +91,6 @@ namespace Part1v1
 
                     case 3:
                         Console.WriteLine("Recipe reverted back to original values:");
-                        Console.WriteLine("\n");
                         recipe.ResetValues();
                         recipe.DisplayRecipe();
                         break;

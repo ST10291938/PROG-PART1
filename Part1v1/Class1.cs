@@ -13,6 +13,7 @@ namespace Part1v1
         public string Name { get => name; set => name = value; }
         public string Measurements { get => measurements; set => measurements = value; }
         public double Quantity { get => quantity; set => quantity = value; }
+        public double OriginalQuantity { get => quantity; set => quantity = value; }
 
         //Constructors to intialize a new instance of an ingriendient
         public Ingredients(string name, string measurements, double quantity) {
@@ -20,6 +21,7 @@ namespace Part1v1
             name = Name;
             measurements = Measurements;
             quantity = Quantity;
+            OriginalQuantity = quantity;
                 }
 
         public Ingredients(string? name, double quantity, string? measurement)
