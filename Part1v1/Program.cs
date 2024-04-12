@@ -89,6 +89,7 @@ namespace Part1v1
                         case 2:
                             recipe.DeleteData();
                             Console.WriteLine("Recipe data cleared");
+                            Main(new string[0]);
                             break;
 
                         case 3:

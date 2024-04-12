@@ -47,6 +47,8 @@ namespace Part1v1
         {//method that will clear all the data of the recipe
             Ingredients[] myIngredients = new Ingredients[0];
             MyCookingMethod[] myCookingMethod= new MyCookingMethod[0];
+            Console.Clear();
+           
         }
 
         public void ResetValues()
