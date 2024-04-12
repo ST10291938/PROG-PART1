@@ -45,10 +45,28 @@ namespace Part1v1
 
         public void DeleteData()
         {//method that will clear all the data of the recipe
-            Ingredients[] myIngredients = new Ingredients[0];
-            MyCookingMethod[] myCookingMethod= new MyCookingMethod[0];
-            Console.Clear();
-           
+            Console.WriteLine("Are you sure you want to delete your recipe data? (yes/no)");
+            string response = Console.ReadLine().ToLower().Trim();
+
+            if (response == "yes")
+            {
+                // Clear the Ingredients array
+                Ingredients[] myIngredients = new Ingredients[0];
+
+                // Clear the CookingMethods array
+                MyCookingMethod[] myCookingMethod = new MyCookingMethod[0];
+
+                // Clear the console screen
+                Console.Clear();
+
+
+            }
+            else
+            {
+                Console.WriteLine("Deletion canceled. Returning to main menu.");
+
+               
+            }
         }
 
         public void ResetValues()
